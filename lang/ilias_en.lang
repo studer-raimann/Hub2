@@ -281,6 +281,8 @@ usr_config_login_field_3#:#External Account
 usr_config_login_field_4#:#External ID
 usr_config_login_field_5#:#firstname.lastname (john.doe)
 usr_config_login_field_6#:#Hub field login
+usr_config_login_keep_case#:#Keep upper and lower case for login
+usr_config_login_keep_case_info#:#If inactive, the login will be entirely lower case.
 usr_prop_password_mail_body#:#Text
 usr_prop_password_mail_date_format#:#Date format for placeholders
 usr_prop_password_mail_placeholders#:#Available placeholders

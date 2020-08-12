@@ -280,6 +280,8 @@ usr_config_login_field_3#:#Externes Konto
 usr_config_login_field_4#:#Externe ID
 usr_config_login_field_5#:#vorname.nachname (john.doe)
 usr_config_login_field_6#:#Hub-Feld Login
+usr_config_login_keep_case#:#Gross-/Kleinschreibung im Login beibehalten
+usr_config_login_keep_case_info#:#Falls inaktiv, wird das Login durchgehend kleingeschrieben.
 usr_prop_password_mail_body#:#Text
 usr_prop_password_mail_date_format#:#Datumsformat für Platzhalter
 usr_prop_password_mail_placeholders#:#Verfügbare Platzhalter

@@ -47,6 +47,11 @@ class UserOriginConfigFormGUI extends OriginConfigFormGUI
         $syncfield->setRequired(true);
         $syncfield->setValue($this->origin->config()->getILIASLoginField());
         $this->addItem($syncfield);
+
+        $keep_case = new ilCheckboxInputGUI(self::plugin()->translate('usr_config_login_keep_case'), $this->conf(IUserOriginConfig::LOGIN_KEEP_CASE));
+        $keep_case->setInfo(self::plugin()->translate('usr_config_login_keep_case_info'));
+        $keep_case->setChecked($this->origin->config()->isKeepCase());
+        $this->addItem($keep_case);
     }
 
 

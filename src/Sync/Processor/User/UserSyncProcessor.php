@@ -294,7 +294,10 @@ class UserSyncProcessor extends ObjectSyncProcessor implements IUserSyncProcesso
             default:
                 $login = substr($this->clearString($user->getFirstname()), 0, 1) . '.' . $this->clearString($user->getLastname());
         }
-        $login = mb_strtolower($login);
+
+        if (!$this->config->isKeepCase()) {
+            $login = mb_strtolower($login);
+        }
 
         // We need to make sure the login is unique, note that ILIAS does this currently only on GUI level -.-
         $appendix = 2;

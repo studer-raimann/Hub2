@@ -21,6 +21,7 @@ class UserOriginConfig extends OriginConfig implements IUserOriginConfig
         = [
             //		'sync_field' => IUserOriginConfig::SYNC_FIELD_NONE,
             self::LOGIN_FIELD => IUserOriginConfig::LOGIN_FIELD_SHORTENED_FIRST_LASTNAME,
+            self::LOGIN_KEEP_CASE => false,
         ];
 
 
@@ -44,6 +45,13 @@ class UserOriginConfig extends OriginConfig implements IUserOriginConfig
         return intval($this->get(self::LOGIN_FIELD));
     }
 
+    /**
+     * @return bool
+     */
+    public function isKeepCase() : bool
+    {
+        return (bool) $this->get(self::LOGIN_KEEP_CASE);
+    }
 
     /**
      * @inheritdoc

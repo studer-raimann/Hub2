@@ -34,8 +34,8 @@ class Menu extends AbstractStaticPluginMainMenuProvider
     public function getStaticTopItems() : array
     {
         return [
-            self::dic()->globalScreen()->mainmenu()->topParentItem(self::dic()->globalScreen()->identification()->plugin(self::plugin()
-                ->getPluginObject(), $this)->identifier(ilHub2Plugin::PLUGIN_ID . "_top"))->withTitle(ilHub2Plugin::PLUGIN_NAME)
+            self::dic()->globalScreen()->mainBar()->topParentItem(self::dic()->globalScreen()->identification()->plugin(self::plugin()
+                ->getPluginObject()->getId(), $this)->identifier(ilHub2Plugin::PLUGIN_ID . "_top"))->withTitle(ilHub2Plugin::PLUGIN_NAME)
                 ->withAvailableCallable(function () : bool {
                     return self::plugin()->getPluginObject()->isActive();
                 })->withVisibilityCallable(function () : bool {
@@ -59,8 +59,8 @@ class Menu extends AbstractStaticPluginMainMenuProvider
         self::dic()->ctrl()->setParameterByClass(ilHub2ConfigGUI::class, "pname", ilHub2Plugin::PLUGIN_NAME);
 
         return [
-            self::dic()->globalScreen()->mainmenu()->link(self::dic()->globalScreen()->identification()->plugin(self::plugin()
-                ->getPluginObject(), $this)->identifier(ilHub2Plugin::PLUGIN_ID . "_configuration"))->withParent($parent->getProviderIdentification())
+            self::dic()->globalScreen()->mainBar()->link(self::dic()->globalScreen()->identification()->plugin(self::plugin()
+                ->getPluginObject()->getId(), $this)->identifier(ilHub2Plugin::PLUGIN_ID . "_configuration"))->withParent($parent->getProviderIdentification())
                 ->withTitle(ilHub2Plugin::PLUGIN_NAME)->withAction(self::dic()->ctrl()->getLinkTargetByClass([
                     ilAdministrationGUI::class,
                     ilObjComponentSettingsGUI::class,

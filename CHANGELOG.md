@@ -20,6 +20,7 @@
 - Mapping strategy by ext id
 - Fix missing move session implementation
 - Fix insert on update, if insert failed on create
+- Feature: user origin config to keep login case (instead of all to lower case)
 
 ## [2.3.0]
 - Support ILIAS 5.4
