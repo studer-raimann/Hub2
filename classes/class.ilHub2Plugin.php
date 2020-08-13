@@ -66,6 +66,11 @@ class ilHub2Plugin extends ilCronHookPlugin
         return self::$instance;
     }
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->provider_collection->setMainBarProvider(new Menu(self::dic()->dic(), $this));
+    }
 
     /**
      * @return ilCronJob[]
@@ -96,16 +101,6 @@ class ilHub2Plugin extends ilCronHookPlugin
                 return null;
         }
     }
-
-
-    /**
-     * @inheritdoc
-     */
-    public function promoteGlobalScreenProvider() : AbstractStaticPluginMainMenuProvider
-    {
-        return new Menu(self::dic()->dic(), $this);
-    }
-
 
     /**
      * @inheritdoc
